@@ -27,14 +27,14 @@ executable nara
   if flag(static)
     ghc-options:
       -optl-static
-  build-depends:       
+  build-depends:
     base,
     nara,
     directory,
     filepath,
     unix == 2.7.*,
     optparse-applicative
-  default-language: 
+  default-language:
     Haskell2010
 
 library
@@ -63,7 +63,7 @@ library
   build-depends:
     async,
     attoparsec,
-    base == 4.9.*,
+    base < 5.0,
     blake2,
     bytestring,
     bytestring-conversion,
@@ -76,16 +76,16 @@ library
     exceptions,
     filepath,
     hex,
-    iproute == 1.7.*,
+    iproute >= 1.7,
     lens,
-    memory == 0.14.*,
-    network == 2.6.*,
+    memory >= 0.14,
+    network >= 2.6,
     optparse-applicative,
     random,
     stm,
     streaming-commons,
     transformers,
-    unix == 2.7.*,
+    unix >= 2.7,
     unordered-containers
 
 
@@ -99,7 +99,7 @@ library
     buildable: False
 
   ghc-options:
-    -Wall -Werror -O2 
+    -Wall -Werror -O2
   if flag(static)
     ghc-options:
       -optl-static
