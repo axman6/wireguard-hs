@@ -1,10 +1,13 @@
-resolver: lts-8.4
+resolver: lts-16.28
 packages:
 - '.'
-- location:
-    git: git://github.com/centromere/cacophony.git
+# - location:
+#     git: git://github.com/centromere/cacophony.git
+#     commit: b7a8cff36d8966b0e274cdb4a338ef581be0d737
+#   extra-dep: true
+extra-deps:
+  - git: git://github.com/axman6/cacophony.git
     commit: b7a8cff36d8966b0e274cdb4a338ef581be0d737
-  extra-dep: true
-extra-deps: []
+  - hex-0.1.2@sha256:1ea06834d1b5616edda6601b2945c5242b44cff9be84ff3a27595a136dcb154e,616
 flags: {}
 extra-package-dbs: []
